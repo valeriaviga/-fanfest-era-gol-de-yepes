@@ -273,7 +273,7 @@ function renderMesas() {
  const ocu = reservasLocales[fechaSel] || new Set();
  const libres = TOTAL_MESAS - ocu.size;
  document.getElementById('mcount').textContent = libres+' DISPONIBLES';
- document.getElementById('statDisp').textContent = libres+' MESAS LIBRES';
+ if(document.getElementById('statDisp'))document.getElementById('statDisp').textContent = libres+' MESAS LIBRES';
  let html='';
  for (let i=1;i<=TOTAL_MESAS;i++) {
  const o=ocu.has(i), s=mesaSel===i;
