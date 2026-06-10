@@ -389,7 +389,7 @@ function confirmarReserva() {
       headers:{'Content-Type':'application/json'}, body:JSON.stringify(datos)});
   } catch(e) {}
   
-  var msg = encodeURIComponent('Hola! Quiero confirmar mi reserva. Fecha: '+fechaSeleccionada+'. Nombre: '+nombre+'. Personas: '+personas+'. Los espero!');
+  var msg = encodeURIComponent('Hola! Quiero confirmar mi reserva. Fecha: '+fechaSeleccionada+'. Nombre: '+nombre+'. Personas: '+personas+'.');
   document.getElementById('modal-wa-btn').href = 'https://wa.me/573232090966?text=' + msg;
   document.getElementById('modal-detalle').textContent = fechaSeleccionada + ' - ' + nombre;
   document.getElementById('modal').classList.add('show');
